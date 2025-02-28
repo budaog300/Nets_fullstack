@@ -1,0 +1,69 @@
+// Общий контейнер профиля
+.profile-container {
+  max-width: 600px; // Ограничиваем ширину контейнера
+  margin: 40px auto; // Центрируем контейнер по горизонтали
+  padding: 20px;
+  background-color: #f9f9f9; // Легкий фоновый цвет
+  border-radius: 12px; // Сглаженные углы
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Добавляем тень
+
+  h2 {
+      font-size: 24px;
+      color: #333;
+      text-align: center; // Заголовок по центру
+      margin-bottom: 20px;
+  }
+
+  // Аватарка пользователя
+  .avatar {
+      display: block;
+      margin: 0 auto; // Центрируем аватарку
+      width: 150px;
+      height: 150px;
+      border-radius: 50%; // Круглая форма
+      object-fit: cover; // Сохраняем пропорции изображения
+      border: 4px solid #fff; // Белая рамка вокруг аватара
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); // Тень вокруг аватара
+      margin-bottom: 20px;
+  }
+
+  // Информация о пользователе
+  .user-info {
+      text-align: center; 
+      margin-top: 20px;
+
+      p {
+          font-size: 16px;
+          color: #555;
+          margin-bottom: 10px;
+
+          strong {
+              color: #333;
+              font-weight: bold;
+          }
+      }
+  }
+
+  // Ссылка "Редактировать профиль"
+  .nav-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #007bff; // Голубой цвет
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+          background-color: #0056b3; // Темно-синий при наведении
+      }
+  }
+
+  // Загрузка данных
+  div {
+      text-align: center;
+      font-size: 18px;
+      color: #888;
+  }
+}

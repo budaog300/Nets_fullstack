@@ -1,0 +1,38 @@
+.auth-container {
+    display: flex;
+    justify-content: flex-end; /* Расположение справа */
+    padding: 10px;       
+    background-color: #f8f9fa; /* Цвет фона */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для глубины */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Центрирование контейнера */
+    padding: 20px;       
+    box-shadow: 0 2px 10px rgba(150, 47, 47, 0.1); /* Тень для глубины */
+    border-radius: 5px; /* Скругление углов */
+}
+
+.nav-button {
+    margin: 0 15px; /* Отступы между кнопками */
+    padding: 10px 20px; /* Внутренние отступы для кнопок */
+    color: #fff; /* Цвет текста */
+    background-color: #007bff; /* Цвет фона кнопок */
+    border: none; /* Удаление границ */
+    border-radius: 5px; /* Скругление углов */
+    text-decoration: none; /* Удаление подчеркивания */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+.nav-button:hover {
+    background-color: #0056b3; /* Цвет при наведении */
+}
+
+.nav-button:active {
+    background-color: #004080; /* Цвет при нажатии */
+}
+
+.nav-button i {
+    margin-right: 5px; /* Отступ между иконкой и текстом */
+}

@@ -1,0 +1,126 @@
+// Общий контейнер
+.table_container {
+    max-width: 80%; // Ограничиваем ширину таблицы до 80% от родительского элемента
+    margin: 20px auto; // Центрируем таблицу
+    padding: 20px;
+    background-color: #f9f9f9; // Легкий фоновый цвет
+    border-radius: 12px; // Сглаженные углы
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); // Добавляем тень
+
+    h1 {
+        font-size: 24px;
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .info_message {
+        font-size: 16px;
+        color: #555;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+}
+
+// Таблица
+.table-con {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #333;
+
+    thead {
+        tr {
+            background-color: #2E8B57; // Голубой цвет для шапки
+            color: white;
+            font-weight: bold;
+
+            th {
+                padding: 12px 15px;
+                text-align: left;
+                cursor: pointer; // Показываем, что заголовки кликабельны
+                position: relative;
+
+                &:hover {
+                    background-color: #3CB371; // Темно-синий при наведении
+                }
+
+                &.active {
+                    background-color: #006400; // Активный столбец темнее
+                }
+
+                span {
+                    font-size: 12px;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            transition: background-color 0.3s ease;
+
+            &.even {
+                background-color: #f3f3f3; // Белый цвет для четных строк
+            }
+
+            &.odd {
+                background-color: #ffffff; // Светло-серый цвет для нечетных строк
+            }
+
+            &:hover {
+                background-color: #A9A9A9; // Подсветка при наведении
+            }
+
+            td {
+                padding: 10px 15px;
+                border-bottom: 1px solid #ddd;
+                text-align: left;
+                vertical-align: middle;
+
+                &.center {
+                    text-align: center;
+                    font-weight: bold;
+                }
+
+                &.photo-cell {
+                    cursor: pointer;
+                    color: #007bff;
+                    font-style: italic;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Кнопки действий
+.icon-button {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+
+    // Кнопка "Изменить"
+    &.edit-button {
+        color: #000; // Черный цвет для карандаша
+        &:hover {
+            color: #555; // Темно-серый при наведении
+        }
+    }
+
+    // Кнопка "Удалить"
+    &.delete-button {
+        color: #f44336; // Красный цвет для удаления
+        &:hover {
+            color: #d32f2f; // Темно-красный при наведении
+        }
+    }
+}

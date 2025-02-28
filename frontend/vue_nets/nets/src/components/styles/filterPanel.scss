@@ -1,0 +1,100 @@
+// // Стиль для общего контейнера фильтров
+// .filter-container {
+//     margin-bottom: 20px;
+//     padding: 15px;
+//     background-color: #f9f9f9;
+//     border: 1px solid #ddd;
+//     border-radius: 8px;
+//     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+//     max-width: 400px; // Ограничиваем максимальную ширину
+//     width: 100%; // Заполняем доступное пространство при необходимости
+//     margin-left: auto; // Центрируем по горизонтали
+//     margin-right: auto; // Центрируем по горизонтали
+//     .filter-fio {
+//         display: flex;
+//         flex-direction: column;
+//         margin-left: 3%;
+//     }
+//     // Стиль для каждого элемента фильтра
+//     .filter-item {
+//         display: flex;
+//         align-items: center;
+//         margin-bottom: 10px;
+
+//         // Стиль для метки (label)
+//         .filter-label {
+//             font-weight: bold;
+//             margin-right: 10px;
+//             width: 120px; // Фиксированная ширина для выравнивания
+//             text-align: right;
+//         }
+
+//         // Стиль для полей ввода
+//         .filter-input {
+//             padding: 8px;
+//             border: 1px solid #ccc;
+//             border-radius: 4px;
+//             font-size: 14px;
+//             width: 100%;
+//             max-width: 200px; // Ограничиваем ширину полей ввода
+//             box-sizing: border-box; // Учитываем padding и border в ширине
+//         }
+
+//         // Специфические стили для блока с ФИО
+//         &.full-name-fields {
+//             display: flex;
+//             flex-direction: column; // Вертикальное расположение полей
+//             gap: 10px; // Отступ между полями
+
+//             .full-name-field {
+//                 display: flex;
+//                 align-items: center;
+
+//                 .filter-label {
+//                     width: auto; // Убираем фиксированную ширину для меток внутри блока ФИО
+//                     margin-right: 5px; // Небольшой отступ между меткой и полем ввода
+//                 }
+
+//                 .filter-input {
+//                     max-width: none; // Убираем ограничение ширины для полей ввода внутри блока ФИО
+//                     width: 100%; // Поле занимает всю доступную ширину
+//                 }
+//             }
+//         }
+//     }
+
+//     // Стиль для блока действий (кнопки)
+//     .filter-actions {
+//         display: flex; // Используем Flexbox
+//         gap: 10px; // Отступ между кнопками
+//         margin-top: 15px; // Отступ сверху
+//         align-items: center;
+//         justify-content: space-evenly;
+
+//         .filter-button {
+//             padding: 10px 20px;
+//             border: none;
+//             border-radius: 4px;
+//             font-size: 14px;
+//             cursor: pointer;
+//             color: white;
+//             transition: background-color 0.3s ease;
+
+//             &.apply-button {
+//                 background-color: #4caf50;
+
+//                 &:hover {
+//                     background-color: #45a049;
+//                 }
+//             }
+
+//             &.clear-button1 {
+//                 background-color: #f44336;
+
+//                 &:hover {
+//                     background-color: #d32f2f;
+//                 }
+//             }
+//         }
+//     }
+// }

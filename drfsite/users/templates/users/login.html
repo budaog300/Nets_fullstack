@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block extra_css %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'users/css/login.css' %}">
+{% endblock %}
+
+{% block toppanel %}
+{% endblock %}
+
+{% block content %}
+
+<div class="login-form">
+    <h2 style="text-align: center; margin-bottom: 20px;">Авторизация</h2>
+    <form method="post">
+        {% csrf_token %}
+        {% for f in form %}
+            <p><label class="form-label" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
+            <div class="form-error">{{ f.errors }}</div>
+        {% endfor %}
+        <div class="form-error">{{ form.non_field_errors }}</div>
+        <input type="hidden" name="next" value="{{ next }}" />
+        <p><button type="submit">Войти</button></p>
+        <small class="form-group">
+             <div class="form-check form-switch">
+                <label class="form-check-label" for="rememberMe">Запомнить меня
+                    <input class="form-check-input" id="rememberMe" type="checkbox" name="rememberMe"/>
+                </label>
+                <div class="spacer"></div>
+                <p><a href="{% url 'users:password_reset' %}">Забыли пароль?</a></p>
+             </div>
+            <p>Еще нет аккаунта? <a href="{% url 'users:register' %}">Зарегистрироваться</a></p>
+        </small>
+    </form>
+</div>
+{% endblock %}

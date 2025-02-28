@@ -1,0 +1,176 @@
+// Оверлей диалогового окна
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); // Полупрозрачный фон
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; // Поверх других элементов
+}
+
+// Содержимое диалога
+.dialog-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+
+  h3 {
+      font-size: 18px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #333;
+  }
+
+  .filter-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .filter-item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          .filter-label {
+              font-size: 14px;
+              color: #555;
+              min-width: 120px; // Для выравнивания меток
+              text-align: right;
+          }
+
+          .filter-input {
+              padding: 8px;
+              font-size: 14px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              width: 100%;
+
+              &:focus {
+                  border-color: #007bff;
+                  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+              }
+          }
+
+          select {
+              appearance: none; // Убираем стандартные стрелки
+              background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236c757d'%3E%3Cpath d='M7.247 12.5l-4.796 2.874a1 1 0 01-1.574-1.032L10.127 7.5H2a1 1 0 010-2h8.127l-2.874-4.796a1 1 0 011.574-1.032l4.796 2.874a1 1 0 010 1.732L8.82 10.766a1 1 0 01-1.573.032z'/%3E%3C/svg%3E");
+              background-repeat: no-repeat;
+              background-position: right 8px center;
+              background-size: 12px;
+          }
+      }
+
+      .filter-fio {
+          display: flex;
+          gap: 10px;
+
+          .full-name-field {
+              flex: 1;
+          }
+      }
+  }
+
+  // Кнопки действий
+  .actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 20px;
+
+      button {
+          padding: 10px 20px;
+          font-size: 14px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: background-color 0.3s ease, color 0.3s ease;
+
+          &:first-child {
+              background-color: #28a745; // Зеленый цвет для "Сохранить/Добавить"
+              color: #fff;
+
+              &:hover {
+                  background-color: #218838;
+              }
+          }
+
+          &:last-child {
+              background-color: #dc3545; // Красный цвет для "Отмена"
+              color: #fff;
+
+              &:hover {
+                  background-color: #bd2130;
+              }
+          }
+      }
+  }
+}
+// Кнопка добавления новой записи
+.add-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #28a745; // Зеленый цвет для кнопки "Добавить"
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  i {
+      margin-right: 5px; // Отступ между иконкой и текстом
+  }
+
+  &:hover {
+      background-color: #218838; // Темно-зеленый при наведении     
+  }
+
+  &:active {
+      transform: scale(0.95); // Небольшое уменьшение при нажатии
+  }
+}
+
+// Блок действий фильтров
+.filter-actions {
+  display: flex;
+  justify-content: flex-end; // Выравнивание кнопок справа
+  gap: 10px; // Пространство между кнопками
+  margin-top: 20px; // Отступ сверху
+
+  .filter-button {
+      padding: 10px 20px;
+      font-size: 14px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+
+      &.apply-button {
+          background-color: #28a745; // Зеленый цвет для "Применить"
+          color: #fff;
+
+          &:hover {
+              background-color: #218838; // Темно-зеленый при наведении             
+          }
+      }
+
+      &.clear-button {
+          background-color: #dc3545; // Серый цвет для "Закрыть"
+          color: #fff;
+
+          &:hover {
+              background-color: #bd2130; // Темно-серый при наведении              
+          }         
+      }
+  }
+}

@@ -1,0 +1,14 @@
+# Общие
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+env/
+venv/
+djvenv/
+*.env
+
+.idea/
+.vscode/
+*.sublime-project      # Sublime Text проекты
+*.sublime-workspace    # Sublime Text рабочие пространства

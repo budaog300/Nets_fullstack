@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block extra_css %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'users/css/update_profile.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h1>Обновить профиль</h1>
+    <div class="profile-update-container">
+        <div class="profile-photo">
+            {% if user.photo %}
+                <img src="{{user.photo.url}}" alt="Фото профиля">
+            {% else %}
+                <img src="{% static 'users/img/empty_profile.jpeg' %}" alt="Фото профиля">
+            {% endif %}
+        </div>
+        <form method="post" enctype="multipart/form-data" class="profile-form">
+            {% csrf_token %}
+            <div class="form-error">{{ form.non_field_errors }}</div>
+            {% for f in form %}
+                <p><label class="form-label" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
+                <div class="form-error">{{ f.errors }}</div>
+            {% endfor %}
+            <p><button type="submit">Сохранить изменения</button></p>
+        </form>
+    </div>
+{% endblock %}

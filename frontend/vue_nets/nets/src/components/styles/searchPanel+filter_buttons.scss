@@ -1,0 +1,85 @@
+// Общий контейнер для поиска и фильтров
+.search-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: inline-flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+    // Стиль для поля ввода
+    #searchInput {
+        width: 100%;
+        padding: 10px 40px 10px 15px; // Добавляем отступ справа для кнопки "×"
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+
+        &:focus {
+            border-color: #007bff; // Подсветка при фокусе
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+        }
+    }
+
+    // Кнопка очистки поиска
+    .clear-button {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: #888;
+        font-size: 16px;
+        cursor: pointer;
+
+        &:hover {
+            color: #007bff; // Изменение цвета при наведении
+        }
+    }
+}
+
+// Информационное сообщение о поиске
+.search-info {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+// Контейнер для кнопок фильтров
+.filter-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; // Пространство между кнопками
+    margin-top: 20px;
+
+    .filter-button {
+        padding: 10px 20px;
+        font-size: 14px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+
+        &.apply-button {
+            background-color: #007bff;
+            color: white;
+
+            &:hover {
+                background-color: #0056b3; // Темно-синий при наведении
+            }
+        }
+
+        &.clear-button1 {
+            background-color: #f44336;
+            color: white;
+
+            &:hover {
+                background-color: #d32f2f; // Темно-красный при наведении
+            }
+        }
+    }
+}

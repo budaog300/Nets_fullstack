@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block extra_css %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'users/css/register.css' %}">
+{% endblock %}
+
+{% block toppanel %}
+{% endblock %}
+
+{% block content %}
+<div class="login-form">
+    <h2>Регистрация</h2>
+    <form method="post">
+        {% csrf_token %}
+        {% for f in form %}
+            <p><label class="form-label" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
+            <div class="form-error">{{ f.errors }}</div>
+        {% endfor %}
+        <div class="form-error">{{ form.non_field_errors }}</div>
+        <input type="hidden" name="next" value="{{ next }}" />
+        <small class="form-group">
+            <p>Создавая учетную запись, вы соглашаетесь с нашим
+                <a href="#" style="color:dodgerblue">Условия и конфиденциальность</a>.
+            </p>
+         </small>
+        <div class="form-group">
+            <button type="submit">Зарегистрироваться</button>
+        </div>
+        <small class="form-group">
+            <p>Уже зарегистрированы? <a href="{% url 'users:login' %}">Войти</a></p>
+        </small>
+    </form>
+</div>
+{% endblock %}

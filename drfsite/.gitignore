@@ -1,0 +1,26 @@
+# Общие
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+env/
+venv/
+djvenv/
+*.env
+.DS_Store
+Thumbs.db
+
+# Бэкенд DRF
+*.log
+db.sqlite3
+/static/
+/media/
+/migrations/*.pyc      # Компилированные миграции
+/migrations/*.pyo      # Оптимизированные миграции
+/migrations/__pycache__/ # Кэш миграций
+
+
+.idea/
+.vscode/
+*.sublime-project      # Sublime Text проекты
+*.sublime-workspace    # Sublime Text рабочие пространства
