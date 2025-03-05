@@ -58,9 +58,7 @@
               }
           }
 
-          select {
-              appearance: none; // Убираем стандартные стрелки
-              background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236c757d'%3E%3Cpath d='M7.247 12.5l-4.796 2.874a1 1 0 01-1.574-1.032L10.127 7.5H2a1 1 0 010-2h8.127l-2.874-4.796a1 1 0 011.574-1.032l4.796 2.874a1 1 0 010 1.732L8.82 10.766a1 1 0 01-1.573.032z'/%3E%3C/svg%3E");
+          select {                            
               background-repeat: no-repeat;
               background-position: right 8px center;
               background-size: 12px;
@@ -68,7 +66,8 @@
       }
 
       .filter-fio {
-          display: flex;
+          display: flex;   
+          flex-direction: column;
           gap: 10px;
 
           .full-name-field {

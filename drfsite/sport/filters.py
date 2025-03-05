@@ -19,14 +19,14 @@ class VeteransFilter(django_filters.FilterSet):
             "club": ["exact"],
         }
 
-    def filter_achievements(self, queryset, name, value):
-        try:
-            search_value = json.loads(value)
-            if "title" in search_value:
-                queryset = queryset.filter(achievements__contains=[{"title": search_value["title"]}])
-            if "year" in search_value:
-                queryset = queryset.filter(achievements__contains=[{"year": search_value["year"]}])
-
-            return queryset.distinct()
-        except json.JSONDecodeError:
-            return queryset.none()
+    # def filter_achievements(self, queryset, name, value):
+    #     try:
+    #         search_value = json.loads(value)
+    #         if "title" in search_value:
+    #             queryset = queryset.filter(achievements__contains=[{"title": search_value["title"]}])
+    #         if "year" in search_value:
+    #             queryset = queryset.filter(achievements__contains=[{"year": search_value["year"]}])
+    #
+    #         return queryset.distinct()
+    #     except json.JSONDecodeError:
+    #         return queryset.none()
